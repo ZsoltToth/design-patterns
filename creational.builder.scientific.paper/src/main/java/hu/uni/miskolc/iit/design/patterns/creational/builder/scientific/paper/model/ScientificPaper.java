@@ -50,4 +50,10 @@ public class ScientificPaper {
 		this.paper = paper;
 	}
 
+	@Override
+	public String toString() {
+		return "ScientificPaper [title=" + title + ", paperAbstract=" + paperAbstract + ", authors=" + authors
+				+ ", paper=" + paper + "]";
+	}
+
 }

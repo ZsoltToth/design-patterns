@@ -4,9 +4,8 @@ import java.io.File;
 
 import hu.uni.miskolc.iit.design.patterns.creational.builder.scientific.paper.model.exceptions.NotExpectedFormatException;
 
-public abstract class ScientifiPaperBuilder {
+public interface ScientificPaperBuilder {
+	ScientificPaper build(String filePath) throws NotExpectedFormatException;
 
-	public abstract ScientificPaper build(String filePath) throws NotExpectedFormatException;
-
-	public abstract ScientificPaper build(File paper) throws NotExpectedFormatException;
+	ScientificPaper build(File paper) throws NotExpectedFormatException;
 }
