@@ -1,0 +1,36 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>hu.uni.miskolc.iit.design.patterns</groupId>
+  <artifactId>instrument</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>instrument</name>
+  <url>http://maven.apache.org</url>
+
+<description>
+	Problem:
+		- There is an instrument that measures the value in time. It produces (time,value) pairs. The instrument should produces recorded values, it should not been implemented properly. 
+		- We would like to get notifications about certain events such as:
+			a) value less / more than x
+			b) change of the value is more than x.
+			c) area below the value measured is bigger than x
+			d) etc. [end of thinking capacity]
+		- Patterns should be used: Observer, Chain of Responsibility.  
+</description>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+</project>
