@@ -22,6 +22,6 @@ public class Sinus implements RealFunction {
     }
 
     public double value(double x) {
-        return amplitude+Math.sin((x/frequence)+phase);
+        return amplitude*Math.sin((frequence*x)+phase);
     }
 }

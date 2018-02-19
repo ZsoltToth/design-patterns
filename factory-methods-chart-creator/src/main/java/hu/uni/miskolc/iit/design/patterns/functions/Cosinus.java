@@ -22,6 +22,6 @@ public class Cosinus implements RealFunction {
     }
 
     public double value(double x) {
-        return amplitude * Math.cos((x/frequence)+phase);
+        return amplitude * Math.cos((x*frequence)+phase);
     }
 }
