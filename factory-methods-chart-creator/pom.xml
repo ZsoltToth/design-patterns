@@ -1,0 +1,36 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>hu.uni.miskolc.iit.design.patterns</groupId>
+  <artifactId>factory.methods.chart.creator</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>factory.methods.chart.creator</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <description>
+    We would like to create a chart creator application.
+    A chart should be printed into a File in various formats such as JPG, PNG, SVG, EPS etc.
+    A Chart should present one or more functions in a given interval.
+    Scales of the X and Y axes could be configured (linear, logarithmic, etc).
+    The available functions are predefined (polynomial, trigonometric, etc.).
+    Each function convert a real value into a real value i.e. f:R->R.
+
+    This is a primitive version of gnuplot :)
+  </description>
+</project>
