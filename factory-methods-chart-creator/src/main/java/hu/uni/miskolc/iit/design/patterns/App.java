@@ -1,6 +1,14 @@
 package hu.uni.miskolc.iit.design.patterns;
 
+import hu.uni.miskolc.iit.design.patterns.chart.Chart;
+import hu.uni.miskolc.iit.design.patterns.chart.ChartPlotter;
+import hu.uni.miskolc.iit.design.patterns.chart.GNUPlotter;
+import hu.uni.miskolc.iit.design.patterns.chart.UnableToPlotException;
 import hu.uni.miskolc.iit.design.patterns.functions.*;
+
+import java.awt.*;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * Hello world!
@@ -8,8 +16,7 @@ import hu.uni.miskolc.iit.design.patterns.functions.*;
  */
 public class App 
 {
-    public static void main( String[] args )
-    {
+    public static void main( String[] args ) throws UnableToPlotException {
         System.out.println( "Hello World!" );
 
 //        FunctionFactory functionFactory = new SinusFunctionFactory(3,Math.PI,100);
@@ -18,13 +25,10 @@ public class App
                 new LinearFunctionFactory(2,-1).createFunction(),
                 new QuadraticFunctionFactory(-3,2,-1).createFunction()
         };
-        for(int i = 0; i < 1e3; i++){
-            double x = (double)i / 1e2;
-            System.out.println(String.format("%f %f %f %f",
-                    x,
-                    functions[0].value(x),
-                    functions[1].value(x),
-                    functions[2].value(x)));
-        }
+        Chart chart = new Chart(0,10,1e-2, Arrays.asList(functions));
+        System.out.println(chart.lookupTable());
+        ChartPlotter plotter = new GNUPlotter(800,600,ChartPlotter.ImageFormats.PNG);
+        Image img = plotter.plot(chart);
+        System.out.println(img);
     }
 }
