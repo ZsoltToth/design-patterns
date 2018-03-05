@@ -5,12 +5,12 @@ import java.util.Date;
 /**
  * Created by tothzs on 2018.03.05..
  */
-public class EvetRecord {
+public class EventRecord {
 
     private Date occured;
     private String note;
 
-    public EvetRecord(Date occured, String note) {
+    public EventRecord(Date occured, String note) {
         this.occured = occured;
         this.note = note;
     }
@@ -21,5 +21,13 @@ public class EvetRecord {
 
     public String getNote() {
         return note;
+    }
+
+    @Override
+    public String toString() {
+        return "EventRecord{" +
+                "occured=" + occured +
+                ", note='" + note + '\'' +
+                '}';
     }
 }

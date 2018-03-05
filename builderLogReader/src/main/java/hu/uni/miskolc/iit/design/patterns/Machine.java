@@ -16,10 +16,25 @@ import java.util.Map;
 public class Machine {
 
     private Map<String, String> properties;
-    private List<EvetRecord> history;
+    private List<EventRecord> history;
 
     protected Machine(){
         this.properties = new HashMap<String, String>();
-        this.history = new ArrayList<EvetRecord>();
+        this.history = new ArrayList<EventRecord>();
+    }
+
+    protected void setProperty(String key, String value){
+        this.properties.put(key,value);
+    }
+    protected void addHistoryRecord(EventRecord record){
+        this.history.add(record);
+    }
+
+    @Override
+    public String toString() {
+        return "Machine{" +
+                "properties=" + properties +
+                ", history=" + history +
+                '}';
     }
 }
