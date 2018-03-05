@@ -1,0 +1,41 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>hu.uni.miskolc.iit.design.patterns</groupId>
+  <artifactId>builder-log-reader</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>builder-log-reader</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <description>
+    This example demonstrates the builder design pattern.
+
+    Background Story
+    There are machines that generates various log files.
+    These files are plain text file and poorly formatted.
+    They are created to read by the users one-by-one.
+    Of course the machine manufacturer provides a processing tool for these log files but it is very expensive.
+    Different manufacturers use different formats and their automatic processing is difficult for employees.
+    So we are hired to create a processing tool that can read data from various file formats.
+
+    Each log contains
+    i) Description of the machine
+    ii) Historical data.
+  </description>
+</project>
